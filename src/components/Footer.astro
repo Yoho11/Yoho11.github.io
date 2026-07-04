@@ -1,0 +1,44 @@
+---
+import { SITE } from "../consts";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-indigo-100 bg-indigo-50/60">
+	<div
+		class="max-w-3xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-neutral-600"
+	>
+		<p>© {year} {SITE.name}</p>
+		<ul class="flex items-center gap-4">
+			<li>
+				<a class="hover:text-indigo-700 transition-colors" href={`mailto:${SITE.email}`}>
+					Email
+				</a>
+			</li>
+			<li>
+				<a
+					class="hover:text-indigo-700 transition-colors"
+					href={SITE.linkedin}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					LinkedIn
+				</a>
+			</li>
+			{
+				SITE.github && (
+					<li>
+						<a
+							class="hover:text-indigo-700 transition-colors"
+							href={SITE.github}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							GitHub
+						</a>
+					</li>
+				)
+			}
+		</ul>
+	</div>
+</footer>
