@@ -20,8 +20,7 @@ read-only live score view.
 During pickup futsal games I kept losing track of the score — and pulling out a phone
 mid-game is awkward. The Apple Watch is already on my wrist, so a one-handed, glanceable
 scorer was the obvious solution. I later added the iPhone companion because typing
-player names on a watch screen between matches got old fast, and a phone on the sideline
-is a better place to glance at the score than everyone crowding around one wrist.
+player names on a watch screen between matches got old fast.
 
 ## How it works
 

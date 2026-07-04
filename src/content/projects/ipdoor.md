@@ -15,23 +15,21 @@ touchscreens mounted at the door.
 On iOS, I led development in Swift/UIKit — building the navigation flow, custom
 views, and Auto Layout screens, and porting over Android-only features, which cut
 crash reports by 40%+ and raised the App Store rating. I built the VoIP calling
-stack end to end: PushKit/CallKit incoming calls (including tracking down an APNs
-content-available/mutable-content throttling issue that was silently dropping
-calls), Linphone routed through a FreeSWITCH back-to-back user agent, and Core
-Bluetooth pairing for device provisioning. Persistence runs on GRDB/SQLite with a
-transactional, cross-table sync repository, plus in-flight state kept in
-UserDefaults/Codable so it survives process kills — closing off a whole class of
-data-loss and post-restart crash bugs.
+stack end to end: PushKit/CallKit incoming calls, Linphone routed through a
+FreeSWITCH back-to-back user agent, and Core Bluetooth pairing for device
+provisioning. Persistence runs on GRDB/SQLite with a transactional, cross-table
+sync repository.
 
 On Android, the app runs the same core feature set — UI, app logic, and local
 persistence with Room, Retrofit/OkHttp, and Firebase (FCM, Crashlytics) — tuned to
 fit both phone screens and the embedded door touchscreens. Bluetooth and NFC support
 opened up new hardware markets, and profiling work trimmed memory use and load times
 on the low-resource embedded devices. On the embedded side, I customized AOSP
-(Android 11) directly: SELinux policy fixes, Bluetooth HAL debugging, and OTA and
-log-filtering improvements that measurably increased field reliability.
+(Android 11) directly: SELinux policy fixes and Bluetooth HAL debugging.
 
 The calling stack is shared across platforms: SIP/VoIP calling (Linphone) works the
-same way on Android, iOS, and an Electron desktop client, all routed through the same
-FreeSWITCH back-to-back user agent, with call-transfer, hold, and media-negotiation
-bugs tracked down at the SIP/SDP signaling level using pcap/Wireshark.
+same way on Android, iOS, and an Electron desktop client, working both peer-to-peer
+on the local network and routed through the same FreeSWITCH back-to-back user agent
+when devices aren't on the same network, with call-transfer, hold, and
+media-negotiation bugs tracked down at the SIP/SDP signaling level using
+pcap/Wireshark.
