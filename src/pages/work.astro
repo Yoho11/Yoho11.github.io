@@ -121,6 +121,19 @@ const projects = (await getCollection("projects")).sort(
 					repository, preventing data loss during delete-and-reinsert cycles.
 				</li>
 				<li>
+					Added Core Bluetooth pairing and device provisioning on iOS.
+				</li>
+				<li>
+					Built core Android features — UI, app logic, and local persistence (Room,
+					Retrofit/OkHttp, Firebase FCM/Crashlytics) — for consumer phones and
+					custom Rockchip-based Android 11 embedded touchscreens.
+				</li>
+				<li>
+					Resolved ANRs and eliminated a foreground-service kill/restart loop on
+					Android, improving device uptime; added Bluetooth and NFC support that
+					opened up new markets.
+				</li>
+				<li>
 					Built and debugged SIP/VoIP calling (Linphone) across iOS, Android, and
 					Electron through a FreeSWITCH back-to-back user agent, resolving
 					transfer/hold/media-negotiation defects with pcap/Wireshark analysis.
@@ -130,8 +143,14 @@ const projects = (await getCollection("projects")).sort(
 					HAL debugging, and OTA/log-filtering improvements that increased reliability.
 				</li>
 				<li>
-					Resolved ANRs and eliminated a foreground-service kill/restart loop,
-					improving device uptime; integrated Core Bluetooth for pairing and provisioning.
+					Delivered React Native and Electron features for a desktop-focused
+					multi-platform app, plus a Next.js/React (TypeScript) frontend with
+					localization and cross-browser support.
+				</li>
+				<li>
+					Maintained a shared cross-platform SDK and ran code reviews/pair-programming;
+					ran self-hosted Git infrastructure and built an S3-based diagnostic
+					log-collection pipeline spanning Android, iOS, and Electron.
 				</li>
 			</ul>
 		</div>

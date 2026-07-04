@@ -7,12 +7,11 @@ export const SITE = {
 	email: "ionutb.chelaru@gmail.com",
 	linkedin: "https://www.linkedin.com/in/ionutbchelaru",
 	github: "https://github.com/Yoho11",
-	resume: "/Ionut_Chelaru_iOS_Engineer_Resume.pdf",
+	resume: "/Chelaru_Ionut_Resume.pdf",
 };
 
 export const NAV_LINKS = [
 	{ href: "/", label: "Home" },
 	{ href: "/work", label: "Work" },
-	{ href: "/personal", label: "Personal" },
 	{ href: "/contact", label: "Contact" },
 ];
